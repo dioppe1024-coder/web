@@ -1,0 +1,492 @@
+
+/* --------body------------ */
+body { 
+    min-height: 100vh;
+    margin: 0;
+    /* background: linear-gradient(135deg, #fad87a 0%, #f0efee 40%, #fad87a 100%);  */
+    background: linear-gradient(135deg, #0B0B0C 0%,  #7A5C00 40%, #FFCD00 100%);
+    background-attachment: fixed; 
+}
+
+
+
+/*----------menu-------------*/
+.navbar {
+    padding: 2rem;
+    background-color: rgba(255, 205, 17, 0.8); 
+    /* background: linear-gradient(135deg, #fad87a 0%, #f0efee 40%, #fad87a 100%); */
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 190px;
+    position: relative;
+    transition: 0.6s ease;
+}
+
+#logo {
+    width: 190px;
+    transition: 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(7, 7, 7, 0.2));
+}
+
+#logo:hover {
+        transform: scale(1.05) skewX(2deg);
+        filter: drop-shadow(0 0 20px rgb(243, 243, 242))
+            hue-rotate(10deg)
+            saturate(150%);
+}
+
+
+.nav-link {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+
+.nav-link:hover {
+  font-size: calc(17px * 1.5); 
+}
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 0%;
+    height: 3px;
+    background: black;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 767px){
+    .navbar-brand { 
+        display: none; 
+    } 
+} 
+
+@media screen and (max-width: 767px){
+    .container-fluid { 
+        max-width: 700px;
+    } 
+} 
+
+
+
+/* section 1 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* --- Contenedor Principal --- */
+.hero-container {
+    max-width: 80rem; 
+    margin: 3rem auto; 
+    padding: 0 1rem; 
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; 
+}
+
+
+.hero-text-side {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.25rem; 
+    letter-spacing: -0.05em; 
+    font-weight: 800; 
+    color: hsl(51, 97%, 49%); 
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); 
+}
+
+.titulo_1 { 
+    display: block;
+}
+
+.titulo_2 {
+    display: block;
+    color: whitesmoke; 
+    font-size: 45px;
+}
+
+.hero-description {
+    margin-top: 0.75rem; 
+    font-size: 1rem; 
+    margin-left: auto;
+    margin-right: auto;
+    color: #E5E7EB; 
+    max-width: 36rem; 
+}
+
+
+.hero-image-side {
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;             
+    max-width: 100%;         
+    height: 100%;            
+    border-radius: 0.75rem;
+    min-height: 14rem;       
+    
+    object-fit: cover;       
+    object-position: center; 
+    
+    box-shadow: 0 10px 30px -10px rgba(255, 205, 0, 0.3); 
+    border: 3px solid rgba(255, 205, 0, 0.15);
+}
+
+
+/* --- Responsivo --- */
+
+@media (min-width: 640px) { 
+    .hero-container {
+        padding: 0 1.5rem; 
+    }
+    .hero-title {
+        font-size: 3rem; 
+    }
+    .hero-description {
+        font-size: 1.125rem; 
+    }
+
+    .hero-img {
+        height: 18rem; 
+    }
+}
+
+@media (min-width: 768px) { 
+    .hero-title {
+        font-size: 3.75rem; 
+    }
+    .hero-description {
+        font-size: 1.25rem; 
+    }
+
+    .hero-img {
+        height: 24rem; 
+    }
+}
+
+@media (min-width: 1024px) { 
+    .hero-container {
+        padding: 0 2rem; 
+        margin: 5rem auto; 
+    }
+    .hero-content {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+    .hero-text-side {
+        text-align: left;
+        width: 50%; 
+    }
+    .hero-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    .hero-image-side {
+        width: 50%; 
+    }
+    .hero-img {
+        height: 31.25rem; 
+    }
+}
+
+
+
+/* -----------seccion de presenytacion--------------------  */
+.logistica-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 40%, #f1c40f 100%);
+    color: white;
+}
+
+.logistica-content {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.logistica-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.logistica-text {
+    font-size: clamp(15px, 2.5vw, 18px);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+.logistica-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.logistica-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logistica-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.logistica-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.logistica-card-title {
+    margin-top: 12px;
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 600;
+}
+
+
+@media (max-width: 1024px) {
+    .logistica-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .logistica-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---nuestras sedes */
+
+#nuestras_sedes {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Título */
+#nuestras_sedes h1 {
+    font-size: clamp(24px, 8vw, 48px); 
+    color: #000; /* Negro */
+    font-weight: 800;
+    letter-spacing: 2px;
+
+
+    text-shadow: 
+        0 0 6px #FFCD11,
+        0 0 12px rgba(255, 205, 17, 0.6);
+
+    transition: all 0.4s ease;
+}
+
+
+#nuestras_sedes h1:hover {
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 30px #FFCD11,
+        0 0 45px rgba(255, 205, 17, 0.7);
+
+    transform: scale(1.07);
+}
+
+
+/* tarjetas--sedes */
+
+.cards-container {
+    display: grid;
+    gap: 20px;
+    row-gap: 50px;
+    padding: 20px;
+    grid-template-columns: 1fr; /* móviles */
+    justify-items: center;
+}
+
+/* pantallas grandes yTablets → 2 columnas */
+@media (min-width: 600px) {
+        .cards-container {
+            grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+.card {
+    width: 95%;
+    background: rgb(247, 219, 145);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #d8d5c4;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    flex: 1;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-content p {
+    margin-top: 8px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.card-footer {
+    padding: 12px 15px;
+    background: #f7f7f7;
+    border-top: 1px solid #ddd;
+}
+
+.card-footer small {
+    color: #777;
+}
+
+
+
+
+
+/* foter */
+footer {
+    background-color: rgba(0, 0, 0, 0.9); 
+    
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redes {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.redsocial i {
+    color: white;
+    font-size: 38px;
+    margin: 7px;
+    display: inline-block;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.redsocial i:hover {
+    color: rgba(252, 227, 3, 0.867);
+    transform: translateY(-20px);
+
+}
+
+.redes span {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.copyright a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 📱 RESPONSIVE PARA MÓVILES */
+@media (max-width: 600px) {
+        footer {
+        background-color: rgba(0, 0, 0, 0.9); /* 60% opaco */
+        padding: 20px;
+        height: auto;    
+    }
+
+
+    .redes {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .redsocial i {
+        font-size: 40px;
+        margin: 7px;
+    }
+
+    .redes span {
+        font-size: 14px;
+        margin-top: 3px;
+  }
+
+  .copyright{
+    justify-content: end;
+    margin-top: 0px;
+    padding: 0;
+    }
+  
+    .copyright a{
+    font-size: 17px;
+
+    }
+}
+
+@media (max-width: 550px) {
+  footer {
+    /* position: fixed; */
+    bottom: 0;
+    height: auto;  
+  }
+}

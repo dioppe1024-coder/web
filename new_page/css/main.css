@@ -1,0 +1,136 @@
+body{
+    background-image: url(../img/fondo\ nav.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+
+
+.header {
+
+    background-image: url(../img/fondo_1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+    text-shadow: 1px 5px 5px black;
+}
+
+.img-logo {
+    margin-left: 30px;
+    width: 250px;
+    height: auto;
+    padding: auto;
+    text-shadow: 3px 3px 8px black;
+
+}
+
+a {
+    text-decoration: none;
+    padding-right: 15px;
+    text-shadow: 0px 1px 10px black;
+
+}
+
+.neon-line-container {
+    margin-top: 15px;
+    position: relative;
+    width: 100vw; /* Ancho de la línea */
+    height: 10px; /* Altura del contenedor para la línea */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Crucial para que la luz negra no se salga */
+}
+
+.neon-line {
+    position: absolute;
+    width: 100%;
+    height: 4px; /* Grosor de la línea */
+    background-color: #f9e205; /* Color amarillo Caterpillar */
+    box-shadow: 0 0 5px #f9e205, /* Resplandor interior */
+                0 0 15px #f9e205, /* Resplandor medio */
+                0 0 30px #f9e205; /* Resplandor exterior */
+    border-radius: 2px; /* Ligeramente redondeado */
+}
+
+.black-light-on-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px; /* Ancho de la "luz negra" */
+    height: 100%; /* Cubre toda la altura del contenedor de la línea */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+    animation: moveBlackLightOnLine 20s linear infinite; /* Animación de 3 segundos, infinita */
+    z-index: 2; /* Asegura que esté por encima de la línea */
+}
+
+@keyframes moveBlackLightOnLine {
+    0% {
+        transform: translateX(-100%); /* Empieza completamente a la izquierda del contenedor */
+    }
+    100% {
+        transform: translateX(110vw); /* Termina fuera del borde derecho del contenedor */
+    }
+}
+
+section {
+    margin-top: 120px;
+    position: relative;
+    padding: auto;
+}
+
+.carousel.Slider {
+    width: 50%;
+    height: 50%;
+}
+
+footer{
+    margin-top: 100px;
+    background-color: black;
+    /* position: fixed;*/
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items   : center;
+    justify-content: space-evenly;
+
+}
+.redsocial i{
+    color: white;
+    font-size: 40px;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.redsocial i:hover{
+    color: rgba(252, 227, 3, 0.867);
+}
+
+.redes span{
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 150px;
+}
+
+i:hover{
+    transform: translateY(-15px);
+}
